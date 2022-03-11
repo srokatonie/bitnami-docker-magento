@@ -273,8 +273,8 @@ magento_initialize() {
             magento_execute cache:enable
 
             # Finally, after the Magento is properly installed on disk, perform database schema upgrade
-            info "Upgrading database schema"
-            magento_execute setup:upgrade
+            info "Upgrading database schema (disabled)"
+            # magento_execute setup:upgrade
         fi
 
         # The below steps are common for both normal installations and installations with 'MAGENTO_SKIP_BOOTSTRAP',
@@ -355,8 +355,8 @@ magento_initialize() {
         fi
 
         # Perform database schema upgrade
-        info "Upgrading database schema"
-        magento_execute setup:upgrade
+        info "Upgrading database schema (disabled)"
+        # magento_execute setup:upgrade
     fi
 
     # Magento includes a command for setting up the cron jobs via the 'cron:install' command
